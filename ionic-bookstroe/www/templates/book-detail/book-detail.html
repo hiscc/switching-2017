@@ -1,0 +1,55 @@
+<ion-view view-title="{{book.alt_title}}">
+	<ion-nav-buttons side="right">
+			<button class="button icon ion-android-navigate" ng-click="scrollTop()">
+				
+			</button>
+		</ion-nav-buttons>
+	<ion-content>
+		<ion-refresher pulling-text="#正在下沉" pulling-icon="spiral" disable-pulling-rotation=false on-refresh="refresh()">
+		</ion-refresher>
+
+    <div class="list padding">
+
+    <div  class="item item-thumbnail-left">
+      <img ng-src="{{book.images.small}}" alt="book.alt_title">
+      <h2>{{book.title}}</h2>
+      <h2>{{book.author[0]}}</h2>
+      <p>{{book.publisher}} - {{book.pubdate}}</p>
+      <p>{{book.pages}} - {{book.price  }}</p>
+    </div>
+
+    <div class="padding">
+    <button class="button button-small button-assertive " style="padding:8px; margin:7px;" ng-repeat="item in book.tags" ui-sref="tab.home({id: item.name})">
+  {{item.name}}
+</button>
+      <p style="max-height:200px; overflow: auto;margin-top:20px" class="padding" >
+        {{book.summary}}
+      </p>
+      <h2 ng-hide="book.catalog == ''">目录</h2>
+      <p style="max-height:200px; overflow: auto;margin-top:20px">{{book.catalog}}</p>
+      <p>
+        <a href="#" class="subdued">{{book.rating.average}} <i class="icon ion-star icon-assertive"></i></a>
+      </p>
+    </div>
+  </div>
+
+
+
+	<div class="list card" ng-repeat="an in annotations.annotations">
+  <div class="item item-avatar">
+    <img ng-src="{{an.author_user.avatar}}">
+    <h2 style="padding-left: 70px">{{an.author_user.name}}</h2>
+    <p style="padding-left: 70px">{{an.time}}</p>
+  </div>
+
+  <div class="item item-body">
+    <p style="padding-left: 70px;max-height: 200px">
+      {{an.content}}
+    </p>
+  </div>
+</div>
+
+	<ion-infinite-scroll on-infinite="add()"  ng-if="" distance="1%">
+	</ion-infinite-scroll>
+  </ion-content>
+</ion-view>

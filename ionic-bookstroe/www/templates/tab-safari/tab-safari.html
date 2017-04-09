@@ -1,0 +1,41 @@
+<ion-view title="发现">
+	<ion-nav-title>
+		<img src="img/logo.svg">
+	</ion-nav-title>
+	<ion-nav-buttons side="right">
+			<button class="button icon ion-android-navigate" ng-click="scrollTop()">
+
+			</button>
+		</ion-nav-buttons>
+		<audio ng-src="{{musicurl | trusted}}" autoplay controls style="width:100%; position:fixed;top:44px"></audio>
+	<ion-content style="top:92px">
+		<div class="bar bar-header item-input-inset bar-positive">
+
+	<label class="item-input-wrapper">
+		<i class="icon ion-ios-search placeholder-icon"></i>
+		<input type="search" placeholder="Search" ng-model="q" required>
+	</label>
+	<button class="button button-dark button-outline" ng-click="search(q)" ng-disabled="!q">
+	<i class="icon ion-paper-airplane"></i>一下！
+	</button>
+	</div>
+		<ion-refresher pulling-text="#正在下沉" pulling-icon="spiral" disable-pulling-rotation=false on-refresh="refresh(q)">
+		</ion-refresher>
+		<!-- <p style="padding-left:10px">这里有 {{musicTrain.songs.length}} 首单曲</p> -->
+
+		<div class="list" collection-repeat="music in musicTrain.songs | filter: q" ng-click="play(music.id)">
+    <a class="item item-thumbnail-left" style="padding-top:25px">
+      <img ng-src="{{music.al.picUrl}}" style="border-radius: 50%">
+      <h2>{{music.al.name}}</h2>
+      <p>{{music.ar[0].name}}</p>
+
+    </a>
+		</div>
+
+		<ion-infinite-scroll
+		  on-infinite="add(q)"
+		  distance="1%"
+			ng-if = "musicTrain.songs.length <= count ">
+		</ion-infinite-scroll>
+	</ion-content>
+</ion-view>

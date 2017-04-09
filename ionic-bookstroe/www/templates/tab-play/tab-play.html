@@ -1,0 +1,43 @@
+<ion-view title="视频">
+	<ion-nav-title>
+		<img src="img/logo.svg">
+	</ion-nav-title>
+	<ion-nav-buttons side="right">
+			<button class="button icon ion-android-navigate" ng-click="scrollTop()">
+
+			</button>
+		</ion-nav-buttons>
+	<ion-content>
+		<div class="bar bar-header item-input-inset bar-positive">
+	<label class="item-input-wrapper">
+		<i class="icon ion-ios-search placeholder-icon"></i>
+		<input type="search" placeholder="Search" ng-model="query">
+	</label>
+	<button class="button button-dark button-outline" ng-click="search(query)" ng-disabled="!query">
+	豆瓣一下！
+	</button>
+	</div>
+		<ion-refresher pulling-text="#正在下沉"  on-refresh="refresh()">
+		</ion-refresher>
+
+		<div class="list card" ng-repeat="f in subjects | filter: query" style="box-shadow:0 1px 3px rgba(0, 0, 0, 0.3); margin: 20px 10px">
+
+	  <div class="item item-avatar">
+	    <img ng-src="{{f.directors[0].avatars.small}}">
+	    <h2 style="margin-left:80px">{{f.original_title}}</h2>
+	    <p style="margin-left:80px">{{f.directors[0].name}} - {{f.year}}</p>
+	  </div>
+
+	  <div class="item item-image">
+	    <img ng-src="{{f.images.large}}" style="height:300px; width:initial">
+	  </div>
+
+	  <span class="item item-icon-left assertive">
+	    <i class="icon ion-star"></i>
+	    {{f.rating.average}}
+	  </span>
+
+	</div>
+
+	</ion-content>
+</ion-view>

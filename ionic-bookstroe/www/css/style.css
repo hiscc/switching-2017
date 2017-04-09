@@ -1,0 +1,114 @@
+/*home*/
+
+img{
+  width: 100%;
+  height: 100%;
+}
+.bar-positive .button{
+  border-color: transparent;
+}
+.bar .button, .bar button{
+  font-size: 26px;
+  line-height: 26px;
+}
+.tabs-striped .tabs{
+  padding-top: 0;
+}
+.tabs-top.tabs-striped .tab-item.tab-item-active{
+  background-color: #000;
+}
+
+.slide-box{
+  height: 350px;
+}
+.item{
+  border-width: 0;
+  border-bottom-width: 2px;
+  border-color: #000;
+}
+.item  p{
+  white-space: pre-wrap;
+  text-overflow: ellipsis;
+  max-height: 60px;
+}
+.card{
+  box-shadow: none;
+}
+.card, .list-inset{
+  margin: 20px 0;
+}
+
+/*safari*/
+.safari-box-container,
+.channel-box-container{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 16px;
+  justify-content: space-around;
+}
+.safari-box-container a,
+.channel-box-container a{
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+}
+.safari-box-container a {
+  width: 33%;
+}
+.channel-box-container a{
+  width: 50%;
+}
+.channel-box-container a:first-child{
+  width: 100%;
+}
+.safari-box-container .box,
+.channel-box-container .box{
+  transform: translateY(50%);
+  width: 100%;
+  height: 100%;
+}
+
+.me .item{
+  border: 0;
+}
+.card .item:last-child{
+  border-bottom: 2px solid;
+}
+
+.me-item{
+  margin: 16px;
+  clear: both;
+}
+.item-avatar{
+  padding-left: 0;
+}
+.item-avatar .icon-me{
+  text-align: center;
+  font-size: 100px;
+  display: block;
+}
+.item-avatar .icon-me:before{
+  color: #888;
+}
+.me-item img{
+  width: 50%;
+  float: left;
+}
+.me-item p{
+  text-align: left;
+  padding-left: 20px;
+}
+
+.spin{
+  animation: spin 9s infinite linear;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

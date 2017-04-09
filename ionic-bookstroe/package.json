@@ -1,0 +1,22 @@
+{
+  "name": "ionic-bookstroe",
+  "version": "1.0.0",
+  "description": "a simple bookstore with ionic\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D live bookstore with ionic\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b",
+  "main": "main",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
+  "keywords": [
+    "ionic",
+    "angularjs"
+  ],
+  "author": "chhh3 <os11353325@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "body-parser": "^1.13.3",
+    "cors": "^2.8.1",
+    "express": "^4.14.1",
+    "request": "^2.79.0"
+  }
+}

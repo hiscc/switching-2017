@@ -1,0 +1,29 @@
+{
+  "name": "contacts",
+  "version": "1.0.0",
+  "description": "meanstack toturial",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "meanstack",
+    "guide",
+    "toturial",
+    "angularjs",
+    "restful",
+    "express"
+  ],
+  "author": "chhh3 <os11353325@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.9",
+    "angular-resource": "^1.5.9",
+    "angular-ui-router": "^0.3.2",
+    "body-parser": "^1.13.3",
+    "bootstrap": "^3.3.7",
+    "express": "^4.13.3",
+    "mongoose": "^4.0.1"
+  }
+}
